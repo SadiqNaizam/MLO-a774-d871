@@ -1,14 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import MainAppLayout from '../components/layout/MainAppLayout';
+import LoginCard from '../components/Auth/LoginCard';
 
-const Index = () => {
+/**
+ * LoginPage serves as the main authentication page for the application.
+ * It utilizes the MainAppLayout for overall structure and centers the LoginCard component.
+ * This page corresponds to the "User Authentication Login" target page specified in project requirements.
+ */
+const LoginPage: React.FC = () => {
+  // This page component is responsible for composing the layout and the main feature (LoginCard).
+  // All specific login logic, state management, and detailed UI elements are encapsulated within LoginCard.
+  // The MainAppLayout provides the dark background and centering for the LoginCard.
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <MainAppLayout>
+      <LoginCard />
+    </MainAppLayout>
   );
 };
 
-export default Index;
+export default LoginPage;
